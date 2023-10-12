@@ -1,7 +1,3 @@
-<?php
-var_dump($discs);
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -20,25 +16,18 @@ var_dump($discs);
         </header>
         <main>
             <div class="container mt-4">
-                <div class="row">
-                    <div class="col">
-                        <div class="card">Lorem ipsum dolor sit amet consectetur.</div>
+                <div class="row row-cols-3 g-3">
+                    <div class="col" v-for="disc in discs">
+                        <div class="card text-center">
+                            <img :src="disc.poster" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">{{disc.title}}</h5>
+                                <p class="card-text">{{disc.author}}</p>
+                                <h5>{{disc.year}}</h5>
+                            </div>
+                        </div>
                     </div>
-                    <div class="col">
-                        <div class="card">Lorem ipsum dolor sit amet consectetur.</div>
-                    </div>
-                    <div class="col">
-                        <div class="card">Lorem ipsum dolor sit amet consectetur.</div>
-                    </div>
-                    <div class="col">
-                        <div class="card">Lorem ipsum dolor sit amet consectetur.</div>
-                    </div>
-                    <div class="col">
-                        <div class="card">Lorem ipsum dolor sit amet consectetur.</div>
-                    </div>
-                    <div class="col">
-                        <div class="card">Lorem ipsum dolor sit amet consectetur.</div>
-                    </div>
+
                 </div>
             </div>
         </main>
