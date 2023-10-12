@@ -1,3 +1,7 @@
+<?php
+var_dump($discs);
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
