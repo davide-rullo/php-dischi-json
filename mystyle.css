@@ -7,10 +7,16 @@ body {
     background-color: #1D2D3C;
 }
 
-.card {
+.card,
+.modal-body {
     background-color: #112030 !important;
 }
 
-.card img {
+.card {
+    cursor: pointer;
+}
+
+.card img,
+.modal img {
     width: 50%;
 }
