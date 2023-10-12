@@ -15,11 +15,12 @@
             <img src="./assets/img/spotify_logo.png" width="40" alt="">
         </header>
         <main>
-            <div class="container mt-4">
+            <div class="container mt-4 mb-4">
                 <div class="row row-cols-3 g-3">
-                    <div class="col" v-for="disc in discs">
-                        <div class="card text-center">
-                            <img :src="disc.poster" class="card-img-top" alt="...">
+
+                    <div class="col" v-for="(disc, index) in discs">
+                        <div class="card text-center text-white d-flex align-items-center p-4" data-bs-toggle="modal" data-bs-target="#prova">
+                            <img :src=" disc.poster" class="card-img-top" alt="...">
                             <div class="card-body">
                                 <h5 class="card-title">{{disc.title}}</h5>
                                 <p class="card-text">{{disc.author}}</p>
@@ -29,6 +30,33 @@
                     </div>
 
                 </div>
+
+
+
+                <!-- Button trigger modal -->
+
+                <!-- Modal -->
+                <div class="modal fade" id="prova" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" v-for="(disc, index) in discs">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <h5>{{disc.title}}</h5>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                <button type="button" class="btn btn-primary">Save changes</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
             </div>
         </main>
     </div>
